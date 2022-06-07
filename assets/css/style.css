@@ -1,0 +1,212 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto, Light;
+}
+
+/*Star Container*/
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header"
+        "formulario"
+        "main"
+        "paginacion"
+        "footer";
+    height: 100%;
+    width: 100%;
+    background-color: #e8f2ff;
+}
+
+/*End Container*/
+/*Star header*/
+.header {
+    grid-area: header;
+    display: grid;
+    background-color: #01579b;
+    color: white;
+    padding: 5px 20px;
+}
+.header-position {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-position h1 {
+    cursor: pointer;
+}
+.icono {
+    cursor: pointer;
+}
+.categoria {
+    display: none;
+}
+/*End header*/
+/*Star formulario*/
+.formulario {
+    grid-area: formulario;
+    display: grid;
+    background-color: rgb(209, 209, 209);
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    padding: 10px;
+}
+.form-select {
+    cursor: pointer;
+}
+/*End formulario*/
+/*Star main*/
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin: 20px 0px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.cards-imgs {
+    height: 200px;
+    padding-bottom: 10px;
+}
+.cards-text {
+    font-size: 18px;
+}
+.button {
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    background-color: #002f6c;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*End main*/
+/*Star paginaton*/
+.paginacion {
+    grid-area: paginacion;
+    display: grid;
+    padding: 5px;
+    background-color: rgb(232 242 255);
+    align-content: center;
+    justify-content: center;
+}
+/*End paginaton*/
+/*Star footer*/
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(1 87 155);
+    color: #FFFFFF;
+}
+/*End footer*/
+
+/*Media Queries*/
+
+/*Media Tablet*/
+
+
+/*Media Desktop*/
+@media only screen and (min-width: 1024px) {
+    .container-grid {
+        grid-template-areas:
+            "header formulario"
+            "header main"
+            "header main"
+            "footer main"
+            "footer paginacion";
+        grid-template-columns: 0.3fr 1.7fr;
+        grid-template-rows: 1fr;
+    }
+
+    .header {
+        grid-area: header;
+        height: 100%;
+    }
+    .header-position {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-content: center;
+        padding: 10px;
+    }
+    .icono {
+        display: none;
+    }
+    .categoria {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .formulario {
+        grid-area: formulario;
+        display: grid;
+        background-color: rgb(209, 209, 209);
+        flex-direction: column;
+        align-content: center;
+        padding: 10px;
+    }
+
+    .main {
+        grid-area: main;
+    }
+    .productos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+    }
+    .card {
+        width: 90%;
+        height: 90%;
+    }
+    .cards-imgs {
+        width: 100%;
+    }
+    .cards-text {
+        font-weight: 18px;
+    }
+    .button {
+        width: auto;
+    }
+    .footer {
+        grid-area: footer;
+        text-align: center;
+        background-color: #002f6c;
+    }
+    .space-text i {
+        cursor: pointer;
+    }
+    .paginacion {
+        grid-area: paginacion;
+    }
+
+}
